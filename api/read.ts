@@ -3,7 +3,7 @@ import {
   APIGatewayProxyResult,
   Context
 } from "https://deno.land/x/lambda/mod.ts";
-import { Client } from "https://deno.land/x/postgres/mod.ts";
+import { Client } from "https://raw.githubusercontent.com/kt3k/deno-postgres/master/mod.ts";
 
 async function connect() {
   const client = new Client();
