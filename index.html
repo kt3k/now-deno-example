@@ -1,0 +1,7 @@
+<main></main>
+<script type="module">
+  const res = await fetch('/api/hello.ts')
+  const obj = await res.json()
+  document.querySelector('main').innerHTML = `<pre>${JSON.stringify(obj)}</pre>`
+  console.log(obj)
+</script>

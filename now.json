@@ -5,7 +5,11 @@
       "runtime": "now-deno@0.3.0"
     }
   },
-  "routes": [
-    { "src": "/hello", "dest": "/api/hello.ts" }
-  ]
+  "env": {
+    "PGUSER": "@pguser",
+    "PGPASSWORD": "@pgpassword",
+    "PGHOST": "@pghost",
+    "PGPORT": "@pgport",
+    "PGDATABASE": "@pgdatabase"
+  }
 }
