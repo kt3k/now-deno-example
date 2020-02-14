@@ -1,6 +1,6 @@
 # now-deno-demo
 
-Very simple BBS written in Deno, running in Zeit [Now][].
+Very simple BBS written in Deno, running in Zeit [Now][]. [Demo][]
 
 # Architecture
 
@@ -56,3 +56,5 @@ Then hit the command `now` and that should run the this app in your now account.
 MIT
 
 [Now]: https://github.com/zeit/now
+[Deno]: https://deno.land/
+[Demo]: https://now-deno-example.kt3k.now.sh/
