@@ -4,13 +4,15 @@ import {
   Context
 } from "https://deno.land/x/lambda/mod.ts";
 import * as base64 from "https://deno.land/x/base64/mod.ts";
-import { Client } from "https://raw.githubusercontent.com/kt3k/deno-postgres/master/mod.ts";
+import { Client } from "https://deno.land/x/postgres/mod.ts";
 
-const conn = (async function connect() {
+async function connect() {
   const client = new Client();
   await client.connect();
   return client
-})();
+}
+
+const connection = connect()
 
 export async function handler(
   event: APIGatewayProxyEvent,
@@ -28,7 +30,8 @@ export async function handler(
       }
     }
   }
-  const result = await (await conn).query(
+  const client = await connection
+  const result = await client.query(
     "INSERT INTO posts (name, body) values ($1, $2);",
     req.user,
     req.body
