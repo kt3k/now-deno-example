@@ -5,14 +5,13 @@
 <button>POST</button>
 <main></main>
 <script>
-
 function qs(query) {
-  return document.querySelector(query)
+  return document.querySelector(query);
 }
 
 const name = qs("[name=name]");
 const body = qs("[name=body]");
-const span = document.createElement('span');
+const span = document.createElement("span");
 
 function sanitize(text) {
   span.textContent = text;
@@ -20,10 +19,10 @@ function sanitize(text) {
 }
 
 window.onload = () => {
-  reload()
-  name.value = localStorage.name || ''
-  qs("button").addEventListener("click", post)
-}
+  reload();
+  name.value = localStorage.name || "";
+  qs("button").addEventListener("click", post);
+};
 
 async function reload() {
   const res = await fetch("/api/read.ts");
@@ -41,13 +40,13 @@ async function reload() {
 async function post() {
 
   if (!name.value) {
-    alert("名前を入力してください")
-    return
+    alert("名前を入力してください");
+    return;
   }
 
   if (!body.value) {
-    alert("コメントを入力してください")
-    return
+    alert("コメントを入力してください");
+    return;
   }
 
   try {
@@ -60,14 +59,14 @@ async function post() {
     });
     await req.text();
   } catch (e) {
-    alert("投稿失敗。時間をおいてあとで試してください。")
-    return
+    alert("投稿失敗。時間をおいてあとで試してください。");
+    return;
   }
 
-  localStorage.name = name.value
-  body.value = ''
+  localStorage.name = name.value;
+  body.value = "";
 
-  await reload()
+  await reload();
 }
 </script>
 
