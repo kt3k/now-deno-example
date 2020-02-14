@@ -2,6 +2,13 @@
 
 Very simple BBS written in Deno, running in Zeit [Now][].
 
+# Architecture
+
+- Runs in Zeit [Now][], which means each endpoints run as AWS Lambda.
+- Written in [Deno][].
+- Stores the data in Postgres DB.
+- Single Page App, written in vanilla JS.
+
 # How to run this demo
 
 You need postgres DB instance to run this demo. You can get a free instance from generous database hosting services such as AWS RDS, ElephantSQL, etc.
