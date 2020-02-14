@@ -18,7 +18,7 @@ export async function handler(
   context: Context
 ): Promise<APIGatewayProxyResult> {
   const client = await connection
-  const result = await client.query("SELECT * FROM posts LIMIT 16;")
+  const result = await client.query("SELECT * FROM posts ORDER BY id desc LIMIT 16;")
   return {
     statusCode: 200,
     body: JSON.stringify(result.rows),
