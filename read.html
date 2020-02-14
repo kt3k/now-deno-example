@@ -1,0 +1,15 @@
+<main></main>
+<script>
+window.onload = async () => {
+  const res = await fetch("/api/read.ts");
+  const posts = await res.json();
+  const html = `
+    <ul>
+      ${posts.map(([id, name, body, createdAt]) => `
+        <li>${name} > ${body} <small>(${createdAt})</small></li>
+      `).join('')}
+    </ul>
+  `;
+  document.querySelector('main').innerHTML = html;
+}
+</script>
