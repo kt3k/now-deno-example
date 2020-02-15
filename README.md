@@ -4,7 +4,7 @@ Very simple BBS written in Deno, running on Zeit [Now][]. [Demo][]
 
 # Architecture
 
-- Runs on Zeit [Now][], which means each endpoints run as AWS Lambda.
+- Runs on Zeit [Now][], which means each endpoint runs as a serverless function.
 - Written in [Deno][].
 - Stores the data in Postgres DB.
 - Single Page App, written in vanilla JS.
@@ -49,7 +49,7 @@ INSERT INTO posts (name, body) VALUES ('bob', 'hey');
 INSERT INTO posts (name, body) VALUES ('bob', 'anyone?');
 ```
 
-Then hit the command `now` and that should run the this app in your now account.
+Then hit the command `now` and that should run this app in your now account.
 
 # License
 
