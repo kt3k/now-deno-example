@@ -1,6 +1,6 @@
 # now-deno-demo
 
-Very simple BBS written in Deno, running in Zeit [Now][]. [Demo][]
+Very simple BBS written in Deno, running on Zeit [Now][]. [Demo][]
 
 # Architecture
 
