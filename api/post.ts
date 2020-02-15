@@ -21,7 +21,7 @@ export async function handler(
   const body = JSON.parse(event.body);
   const json = new TextDecoder().decode(base64.toUint8Array(body.body));
   const req = JSON.parse(json);
-  if (!req || !req.user || !req.body) {
+  if (!req || !req.user || !req.body || String(req.body).length > 500) {
     return {
       statusCode: 400,
       body: JSON.stringify({ message: "bad request" }),
