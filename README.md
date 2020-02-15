@@ -4,7 +4,7 @@ Very simple BBS written in Deno, running in Zeit [Now][]. [Demo][]
 
 # Architecture
 
-- Runs in Zeit [Now][], which means each endpoints run as AWS Lambda.
+- Runs on Zeit [Now][], which means each endpoints run as AWS Lambda.
 - Written in [Deno][].
 - Stores the data in Postgres DB.
 - Single Page App, written in vanilla JS.
