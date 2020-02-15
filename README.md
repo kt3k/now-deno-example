@@ -43,7 +43,7 @@ CREATE TABLE posts(
 I recommend you insert some of rows before starting:
 
 ```sql
-INSERT INTO posts (name, body) VALUES ('alice', 'hi')
+INSERT INTO posts (name, body) VALUES ('alice', 'hi');
 INSERT INTO posts (name, body) VALUES ('alice', 'anyone here?');
 INSERT INTO posts (name, body) VALUES ('bob', 'hey');
 INSERT INTO posts (name, body) VALUES ('bob', 'anyone?');
