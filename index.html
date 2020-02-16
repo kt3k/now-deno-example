@@ -21,13 +21,16 @@
     .post__timestamp {
       color: #888888;
     }
+
+    .old-link {
+      margin-top: 4px;
+    }
   </style>
 </head>
 <h1>めっちゃモダン掲示板★彡</h1>
 <input name="name" size="10" placeholder="name" />
 <input name="body" size="40" placeholder="comment" />
 <button class="post-button">POST</button>
-<a href="./200.html">old messages</a>
 <main></main>
 <script>
 function qs(query) {
@@ -57,6 +60,7 @@ async function reload() {
     ${posts.map(([id, name, body, createdAt]) => `
       <div class="post">${sanitize(name)} > ${sanitize(body)} <small class="post__timestamp">(${createdAt})</small></div>
     `).join("")}
+    <div class="old-link"><a href="./200.html">old messages</a></div>
   `;
   qs("main").innerHTML = html;
 }
