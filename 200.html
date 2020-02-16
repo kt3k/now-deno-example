@@ -1,0 +1,30 @@
+<head>
+<style>
+main {
+  margin: 10px;
+}
+.post {
+  overflow-y: hidden;
+  margin-top: 2px;
+}
+</style>
+</head>
+<a href="./">Back</a>
+<main></main>
+<script>
+const span = document.createElement('span');
+function sanitize(text) {
+  span.textContent = text;
+  return span.innerHTML;
+}
+window.onload = async () => {
+  const res = await fetch("/api/read200.ts");
+  const posts = await res.json();
+  const html = `
+    ${posts.map(([id, name, body, createdAt]) => `
+      <div class="post">${sanitize(name)} > ${sanitize(body)} <small>(${createdAt})</small></div>
+    `).join('')}
+  `;
+  document.querySelector('main').innerHTML = html;
+}
+</script>
