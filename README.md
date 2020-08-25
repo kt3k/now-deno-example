@@ -1,6 +1,6 @@
 # now-deno-demo
 
-Very simple BBS written in Deno, running on Zeit [Now][]. [Demo][]
+Very simple BBS written in Deno, running on Zeit [Now][].
 
 # Architecture
 
@@ -57,4 +57,3 @@ MIT
 
 [Now]: https://github.com/zeit/now
 [Deno]: https://deno.land/
-[Demo]: https://now-deno-example.kt3k.now.sh/
